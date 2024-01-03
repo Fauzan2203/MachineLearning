@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="Image Embedding" qualified_name="orangecontrib.imageanalytics.widgets.owimageembedding.OWImageEmbedding" project_name="Orange3-ImageAnalytics" version="" title="Image Embedding" position="(249.0, 408.0)" />
+		<node id="1" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Data Table (1)" position="(420.0, 289.0)" />
+		<node id="2" name="Import Images" qualified_name="orangecontrib.imageanalytics.widgets.owimageimport.OWImportImages" project_name="Orange3-ImageAnalytics" version="" title="Import Images" position="(78.0, 192.0)" />
+		<node id="3" name="Image Viewer" qualified_name="orangecontrib.imageanalytics.widgets.owimageviewer.OWImageViewer" project_name="Orange3-ImageAnalytics" version="" title="Image Viewer" position="(261.0, 179.0)" />
+		<node id="4" name="Distances" qualified_name="Orange.widgets.unsupervised.owdistances.OWDistances" project_name="Orange3" version="" title="Distances" position="(426.0, 440.0)" />
+		<node id="5" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Data Table" position="(265.0, 289.0)" />
+		<node id="6" name="Hierarchical Clustering" qualified_name="Orange.widgets.unsupervised.owhierarchicalclustering.OWHierarchicalClustering" project_name="Orange3" version="" title="Hierarchical Clustering" position="(602.0, 436.0)" />
+		<node id="7" name="Image Viewer" qualified_name="orangecontrib.imageanalytics.widgets.owimageviewer.OWImageViewer" project_name="Orange3-ImageAnalytics" version="" title="Image Viewer (1)" position="(805.0, 433.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Embeddings" sink_channel="Data" enabled="true" source_channel_id="embeddings" sink_channel_id="data" />
+		<link id="1" source_node_id="2" sink_node_id="0" source_channel="Data" sink_channel="Images" enabled="true" source_channel_id="data" sink_channel_id="images" />
+		<link id="2" source_node_id="2" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="3" source_node_id="0" sink_node_id="4" source_channel="Embeddings" sink_channel="Data" enabled="true" source_channel_id="embeddings" sink_channel_id="data" />
+		<link id="4" source_node_id="2" sink_node_id="5" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="5" source_node_id="4" sink_node_id="6" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="6" source_node_id="6" sink_node_id="7" source_channel="Selected Data" sink_channel="Data" enabled="true" source_channel_id="selected_data" sink_channel_id="data" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'_auto_apply': True, 'cb_embedder_current_id': 1, 'cb_image_attr_current_id': 0, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02%\x00\x00\x00\xf3\x00\x00\x031\x00\x00\x01\xd0\x00\x00\x02&amp;\x00\x00\x01\x12\x00\x00\x030\x00\x00\x01\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x02&amp;\x00\x00\x01\x12\x00\x00\x030\x00\x00\x01\xcf', '__version__': 1}</properties>
+		<properties node_id="1" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\x1c\x00\x00\x00x\x00\x00\x05=\x00\x00\x02\x8b\x00\x00\x02\x1d\x00\x00\x00\x97\x00\x00\x05&lt;\x00\x00\x02\x8a\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x02\x1d\x00\x00\x00\x97\x00\x00\x05&lt;\x00\x00\x02\x8a', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': True, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="2" format="pickle">gASVDgIAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
+cmFuZ2V3aWRnZXQudXRpbHMuZmlsZWRpYWxvZ3OUjApSZWNlbnRQYXRolJOUKYGUfZQojAdhYnNw
+YXRolIw6RDovRG9jdW1lbnRzL09qYW4vTWFjaGluZSBMZWFybmluZy9EYXRhc2V0L2FuaW1hbHMv
+YW5pbWFsc5SMBnByZWZpeJROjAdyZWxwYXRolE6MBXRpdGxllIwAlIwFc2hlZXSUaA6MC2ZpbGVf
+Zm9ybWF0lE51YmgGKYGUfZQoaAmMMkQ6L0RvY3VtZW50cy9PamFuL01hY2hpbmUgTGVhcm5pbmcv
+RGF0YXNldC9hbmltYWxzlGgLTmgMTmgNaA5oD2gOaBBOdWJoBimBlH2UKGgJjEtEOi9Eb2N1bWVu
+dHMvT2phbi9NYWNoaW5lIExlYXJuaW5nL0RhdGFzZXQvRnJ1aXRzX1ZlZ2V0YWJsZXNfRGF0YXNl
+dCgxMjAwMCmUaAtOaAxOaA1oDmgPaA5oEE51YmWME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDL
+AAMAAAAAAgwAAAESAAADSgAAAbEAAAINAAABMQAAA0kAAAGwAAAAAAAAAAAFVgAAAg0AAAExAAAD
+SQAAAbCUjAtfX3ZlcnNpb25fX5RLAXUu
+</properties>
+		<properties node_id="3" format="literal">{'autoCommit': True, 'controlAreaVisible': True, 'imageSize': 100, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x1a\x00\x00\x00R\x00\x00\x04;\x00\x00\x02q\x00\x00\x01\x1b\x00\x00\x00q\x00\x00\x04:\x00\x00\x02p\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01\x1b\x00\x00\x00q\x00\x00\x04:\x00\x00\x02p', '__version__': 1, 'context_settings': []}</properties>
+		<properties node_id="4" format="literal">{'autocommit': True, 'axis': 0, 'controlAreaVisible': True, 'metric_id': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\x8d\x00\x00\x00\xb8\x00\x00\x04\xbc\x00\x00\x01\xe5\x00\x00\x03\x8e\x00\x00\x00\xd7\x00\x00\x04\xbb\x00\x00\x01\xe4\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x03\x8e\x00\x00\x00\xd7\x00\x00\x04\xbb\x00\x00\x01\xe4', '__version__': 4}</properties>
+		<properties node_id="5" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\x1c\x00\x00\x00x\x00\x00\x05=\x00\x00\x02\x8b\x00\x00\x02\x1d\x00\x00\x00\x97\x00\x00\x05&lt;\x00\x00\x02\x8a\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x02\x1d\x00\x00\x00\x97\x00\x00\x05&lt;\x00\x00\x02\x8a', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': True, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="6" format="literal">{'annotation_if_enumerate': 'Enumeration', 'annotation_if_names': 'Name', 'autocommit': True, 'controlAreaVisible': True, 'cut_ratio': 75.0, 'label_only_subset': False, 'linkage': 4, 'max_depth': 10, 'pruning': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x017\x00\x00\x00X\x00\x00\x04\x1f\x00\x00\x02k\x00\x00\x018\x00\x00\x00w\x00\x00\x04\x1e\x00\x00\x02j\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x018\x00\x00\x00w\x00\x00\x04\x1e\x00\x00\x02j', 'selection_method': 0, 'top_n': 3, 'zoom_factor': 0, '__version__': 2, '__session_state_data': {'version': (0, 0, 0)}, 'context_settings': []}</properties>
+		<properties node_id="7" format="literal">{'autoCommit': True, 'controlAreaVisible': True, 'imageSize': 100, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x1a\x00\x00\x00R\x00\x00\x04;\x00\x00\x02q\x00\x00\x01\x1b\x00\x00\x00q\x00\x00\x04:\x00\x00\x02p\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01\x1b\x00\x00\x00q\x00\x00\x04:\x00\x00\x02p', '__version__': 1, 'context_settings': []}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
